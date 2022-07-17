@@ -1,4 +1,4 @@
-package j03_연산자;
+package j04_문자열;
 
 public class String1 {
 
