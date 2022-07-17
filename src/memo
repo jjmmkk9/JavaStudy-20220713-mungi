@@ -70,6 +70,18 @@
 				.replaceAll(", ", "/");
 				System.out.println(rePhone2);
 				
+20220715 
+git 공부하기 ~!~!~!~! 드림코딩 엘리 복습해라 복습해라 복습해라 복습해라 
+
+표준입력 Scanner Class
+	Scanner메소드() 
+	scanner.next() 는 줄바꿈과 스페이스를 포함하지 않는다.
+	scanner.nextLine()은 줄바꿈과 스페이스 포함 (조 문기) 입력가능
+	*버퍼개념 + nextLine )
+			키보드 입력은 누르면 바로 나온다. 한글은 ㄱ + ㅏ 인데 ㄱ 누르자마자 출력되는 꼴
+			문자열도 마찬가지로 문자를 여러개를 써야하는데 버퍼 쓰지 않으면 출력이 
+			한 키마다 따로 출력된다.
+			그래서 nextLine 앞에서 엔터 없애줄라고 nextLine 해줌~~		
 	
   	
   	
