@@ -59,6 +59,8 @@
 문자열
 	subString() : 글자 자르기  <String1>
 	index : 글자 자릿수 구하기    <String1>
+	
+	
 	lastIndex : 뒤에서부터 검사해서 동일한 글자가 있을 때   
 		앞쪽 글자 먼저 잡히는 index와 동일한 글자의 자리를 뒤쪽에서 찾고싶을때 
 	replace(char, char) : 문자를 찾아서 다른 문자로 바꿔라
@@ -69,6 +71,7 @@
 				.replaceAll("/", "-")
 				.replaceAll(", ", "/");
 				System.out.println(rePhone2);
+		<input4> 에서 문제 풀어봄!!! 이름이랑 전화번호 입력받아서 출력형식 잡기
 				
 20220715 
 git 공부하기 ~!~!~!~! 드림코딩 엘리 복습해라 복습해라 복습해라 복습해라 
@@ -81,7 +84,46 @@ git 공부하기 ~!~!~!~! 드림코딩 엘리 복습해라 복습해라 복습�
 			키보드 입력은 누르면 바로 나온다. 한글은 ㄱ + ㅏ 인데 ㄱ 누르자마자 출력되는 꼴
 			문자열도 마찬가지로 문자를 여러개를 써야하는데 버퍼 쓰지 않으면 출력이 
 			한 키마다 따로 출력된다.
-			그래서 nextLine 앞에서 엔터 없애줄라고 nextLine 해줌~~		
+			그래서 nextLine 앞에서 엔터 없애줄라고 nextLine 해줌~~
+			
+20220719
+
+StringBuilder stringBuilder = new StringBuilder();
+	stringBuilder.append("이름: ");
+	stringBuilder.append("김준일");
+	System.out.println(stringBuilder.toString(());
+		==> 이름: 김준일
+	
+	<Stringbuilder2, 3(복습)>
+	String names = "김준일님, 서재효님, 임나영님, 문창배님, 전나경님";
+	names.indexOf("님") 문자열에서 첫번재 님 밖에 못찾음
+	index = names.indexOf("님", index + 1) 계속 찾음
+	
+	
+제어 흐름 - 조건문, 반복문
+	흐름도: 생산성 up 프로그램 전체 흐름을 쉽게 파악할 수 있으며, 코드 작성 실수를 줄일수 있다. 
+	C:\mungi\web\data\flowchart\If 흐름도 작성해본 것
+	
+if (와 3항 연산자)	
+	우리 컴퓨터에서 cpu는 연산을 하는 애라서 연산자를 좋아한대 if보다
+	그래서 둘다 같은 동작을 한다면 되도록 3항연산자 사용
+	
+switch case
+	해당 케이스 위치를 찾아가서 거기서부터 실행해라
+	그래서 case 사이에 break를 걸어주면 그 케이스까지만 실행됨.
+break 
+	제어문 탈출 그러나 if문 탈출은 안됨.
+for
+while
+continue
+
+
+	
+	
+
+	
+	
+		
 	
   	
   	
