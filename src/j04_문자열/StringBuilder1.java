@@ -10,6 +10,7 @@ public class StringBuilder1 {
 		
 		System.out.println(stringBuilder.toString());
 		
+		
 	}
 
 }

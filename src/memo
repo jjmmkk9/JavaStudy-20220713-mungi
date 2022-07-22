@@ -15,11 +15,11 @@
 		0~9(10개)		
 	16진수 <10이 되는 순간 = 16>
 
-비트 (2^1
-	↓ 1자리가 1bit1
-	0000 -> 1111 4bit
+1 비트 (2^1
+	↓ 1자리가 1bit
+	0 0 0 0 -> 1 1 1 1 = 4bit = 2^4
 	
-바이트 (2^8
+1 바이트(8비트) (2^8  
 	00000000 -> 11111111 8bit => 1byte
 	
 20220714	
@@ -84,46 +84,131 @@ git 공부하기 ~!~!~!~! 드림코딩 엘리 복습해라 복습해라 복습�
 			키보드 입력은 누르면 바로 나온다. 한글은 ㄱ + ㅏ 인데 ㄱ 누르자마자 출력되는 꼴
 			문자열도 마찬가지로 문자를 여러개를 써야하는데 버퍼 쓰지 않으면 출력이 
 			한 키마다 따로 출력된다.
+
 			그래서 nextLine 앞에서 엔터 없애줄라고 nextLine 해줌~~
 			
 20220719
 
-StringBuilder stringBuilder = new StringBuilder();
-	stringBuilder.append("이름: ");
-	stringBuilder.append("김준일");
-	System.out.println(stringBuilder.toString(());
-		==> 이름: 김준일
-	
-	<Stringbuilder2, 3(복습)>
-	String names = "김준일님, 서재효님, 임나영님, 문창배님, 전나경님";
-	names.indexOf("님") 문자열에서 첫번재 님 밖에 못찾음
-	index = names.indexOf("님", index + 1) 계속 찾음
-	
+
+j04_문자열
+	StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append("이름: ");
+		stringBuilder.append("김준일");
+		System.out.println(stringBuilder.toString(());
+			==> 이름: 김준일
+		
+		<Stringbuilder2, 3(복습)>
+		String names = "김준일님, 서재효님, 임나영님, 문창배님, 전나경님";
+		names.indexOf("님") 문자열에서 첫번재 님 밖에 못찾음
+		index = names.indexOf("님", index + 1) 계속 찾음
+		
 	
 제어 흐름 - 조건문, 반복문
 	흐름도: 생산성 up 프로그램 전체 흐름을 쉽게 파악할 수 있으며, 코드 작성 실수를 줄일수 있다. 
 	C:\mungi\web\data\flowchart\If 흐름도 작성해본 것
 	
-if (와 3항 연산자)	
-	우리 컴퓨터에서 cpu는 연산을 하는 애라서 연산자를 좋아한대 if보다
-	그래서 둘다 같은 동작을 한다면 되도록 3항연산자 사용
+	if (와 3항 연산자)	
+		우리 컴퓨터에서 cpu는 연산을 하는 애라서 연산자를 좋아한대 if보다
+		그래서 둘다 같은 동작을 한다면 되도록 3항연산자 사용
+		
+	switch case
+		해당 케이스 위치를 찾아가서 거기서부터 실행해라
+		그래서 case 사이에 break를 걸어주면 그 케이스까지만 실행됨.
+	break 
+		제어문 탈출 그러나 if문 탈출은 안됨.
+		
+	for
 	
-switch case
-	해당 케이스 위치를 찾아가서 거기서부터 실행해라
-	그래서 case 사이에 break를 걸어주면 그 케이스까지만 실행됨.
-break 
-	제어문 탈출 그러나 if문 탈출은 안됨.
-for
-while
-continue
+	while
+		while(조건문){
+		실행문
+		후증가
+	
+	continue
+		if ~~~ continue; continue 만나면 밑에거 실행하지 말고 다시 다음 반복으로 가라
+	
+
+20220720 
+
+random 메소드
 
 
+Random 클래스
+		random메소드는 
+			double rNum = Math.random();
+			System.out.println((int) (rNum * 10)); 이렇게 사용해야 1~10 사이의 랜덤 정수 얻을 수 있다.
+		Random 클래스는
+			Random random = new Random();  // Random 임포트?선언? 해줌
+			int rNum = random.nextInt(10); //10 까지  
+			System.out.println(rNum);
+	
+	j07_반복<DoubliWhile2> 1교시, 50분 1~50분, 10분 쉬는 시간 1분~10분, 2교시 ... 4교시 ...		
+	j07_반복.랜덤<Random2> 랜덤으로 생성되는 i 10개 중 최대값 구하기
+	j07_반복.랜덤<Random3> a, b, c, max 비교
+	j07_반복<For2> For문 중첩으로 구구단 만들기
+	j07_반복<For3> For문으로 문자열 abcdefg 한글자씩 출력 [str.length]
+	j07_반복<For4> 
+	
+	
+20220721
+	j08_메소드
+		<Method1>
+		만약 <ProtocolSubString> 을 data2 data3 만들려고 하면 
+		똑같이 코드를 복사해서 코드를 전부 data2로 바꾸고 data3로 바꿔야한다. 그러나
+		오늘 배울 Method를 이용하면 Method화 해서 사용이 가능하다.
+		
+		public static void printData(String data){
+		while(true) {
+		......
+		}
+		system.out.println("-------------")  -> data2, data3 늘어날때 마다 구분 선
+		
+		
+		<Method2> 
+			반환도 없고 매개변수도 없는 메소드 설명
+			반환이 없고 매개변수가 있는 메소드 설명
+			반환이 없고 매개변수가 두개인 메소드 설명
+			반환이 있고 매개변수가 없는 메소드 설명
+			test6 
+				return과 break는
+				둘다 반복을 멈추는 용으로 쓸 수 있지만 메소드 안에서 return; 해버리면
+				반복도 종료하고 메소드도 탈출해버림
+				break는 반복만 종료하고 메소드 아랫줄은 계속 실행!
+				
+			
+			반환자료형
+			리턴자료형
+			
+			반환값
+			리턴값
+			
+			메소드명
+			함수명
+			
+			파라미터
+			매개변수
+			
+20220722
+클래스
+<Computer>
+	클래스는 틀이다. 객체는 붕어빵
+	인스턴스는 각각의 붕어빵들
+	
+	-힙영역 설명(생성, 소멸 + 가비지콜렉터)
+		new  (Computer computer = new Computer())
+			=> 생성이며 힙heap영역을 빌려오는 것 => 동적할당
+			
+Computer c1 = new Computer();   c1에 클래스 고유 주소를 대입한느 것이야~!~!
+Computer c2 = new Computer(); 	
+								c1.company = "삼성" 
 	
 	
 
 	
 	
 		
+
+
 	
   	
   	
