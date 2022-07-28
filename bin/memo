@@ -200,17 +200,132 @@ Random 클래스
 			
 Computer c1 = new Computer();   c1에 클래스 고유 주소를 대입한느 것이야~!~!
 Computer c2 = new Computer(); 	
-								c1.company = "삼성" 
+								c1.company = "삼성"
+								
+j09_클래스.생성자<ConstuctorEx>
+	
+		NoArgsConstructor, RequiredArgsConstructor, AllArgsConstructor	
+				//Args -> Arguments 인수, 매개변수
+				
+			-ConstuctorEx constuctorEx2 = new ConstuctorEx("김준일"); => 매개변수 name에 대입
+			-constructorEx2.name = "김준일"; => 전역 변수 this.name에 대입
+			
+j09_클래스.생성자<ConstuctorEx2> 
+		기본생성자 말고 다른 생성자가
+		하나라도 오버로딩 되면 기본생성자는 비활성화 된다. 
+		그래서 같이 쓰고 싶으면 기본생성자를 명시해줘야한다.
+j09_클래스.생성자<Car>, <CarMain>
+		전체생성자 오버로딩해줌 -> 생성하면서 같이 값을 넣어줌
+			Car car1 = new Car("현대자동차", "쏘나타", "화이트");
+			car1.showInfo();
+		이게 코드 끝
+		전체생성자를 쓰는 이유 => 접근지정자!!!!!!!1
+		
+20220725
+j10_배열
+<Array1> 배열 기본형
+	Scanner라는 클래스를 담을 수 있는 공간 5개 생성
+		=> Scanner 객체를 5개 생성한게 아니다. 
+<Array3> 배열 사용 해서 이름, 학년, 점수 순서 대로 객체 생성
+<Array5> null개념
+
+j10_배열.Arrays
+<Arrays1> 
+			Arrays 클래스 사용법
+		 *  -배열을 관리해주는 객체
+		 *  1. 배열의 내용을 검색 후 인덱스를 반환받는 방법
+		 *  	-binarySearch(찾고자하는 값)
+		 *  2. 배열을 복사할때 사용하는 메소드
+		 *   	-copyOf(복사하고자하는 배열, 새로 생성할 배열의 크기)
+		 *  3. 배열을 복사할 때 원하는 범위만 복사해주는 메소드
+		 *  	-copyOfRange(복사하고자하는 배열, 시작인덱스, 마지막 인덱스)
+		 *  4. 배열을 초기화하고 원하는 값으로 모두 채우는 메소드
+		 *  	-fill(초기화하고자하는 배열, 채울 값)
+		 *  5. 배열을 정렬하는 방법
+		 *  	-sort(정렬하고자하는 배열)
+
+
+j11_상속 <Animal>, <Factory> 
+		상속받은 Human, Tiger  Samsung, Lg
+		상속관계 속에서 메소드 매개변수의 이동 경로 파악
+		Factories[] 배열해서 1공장 2공장 3공장 하는 법
+<FactoryMain2>
+	상속하면 부모 객체에 자식을 대입할 수있다.
+	그런데 업캐스팅 되어있어서 자식에만 있는 메소드를 사용할 수 없다. 
+	Main2에서 삼성과 엘지의 고유 메소드를 사용하고 싶으면 다시 형변환 해줘야한다. 
+	
+20220726
+	<Q. 생성자랑 메소드가 다른 점>
+	j10_클래스2 <Student>
+	생성자는 new 할때만 쓰고 주소.찍고 할때 메소드를 씀
+	public Car(){} 이게 기본 생성자 
+	생성자는 무조건 클래스명이랑 똑같고 반환자료형이 없다!!!!
+	기본생성자냐 전체생성자냐에 따라 매개변수가 있냐없냐만 다르다.
+	<StudentMain>에 new 해서 생성하는 것은 모든 변수가 힙 메모리영역에 카피된다. 
+	그런데 Student에 변수들을 전부 private 줬기 때문에 여기서 접근할 수없다. 그래서
+	메소드들을 통해서 접근하겠다 -> 게터세터 필요
+	
+	<Student>에 Genarate to.string 해줌 -> 이게 머지
+	
+!!!!!!오늘 한 <Student>, <StudentService>, <StudentMain> 다시 영상 보면서 다시 만들기
+
+<StudentService> 완전 망했슴 다시 하기
+
+
+20220727
+Q. 리터럴상수가 머였죠? 이미 정의되어진 상수죠 
+
+<FactoryMain3>업캐스팅 다운캐스팅 다시 정리
+<FactoryMain4>instanceOf 객체 비교
+<FactoryMain5>instanceOf 써서 삼성1~50 공장 엘지 1~50 공장 가동, 스마트폰이랑 tv생산, 중지 
+
+
+j12_다형성 - 인터페이스, 추상
+추상  <Animal>, <Human>, <Computer>, <Laptop>, <Desktop>에서 추상클래스 추상메소드 특징 정리 
+	추상
+ 	* 추상 메소드가 하나라도 포함되어 있는 클래스는 무조건 추상 클래스로 정의해야한다.
+ 	* 틀(클래스)를 만들기 위한 설계도(추상클래스)
+ 	* Main가서 생성할 때 추상 클래스는 생성할 수 없다. 
+ 	* 추상메소드란??: public abstract void move();  <<< 이런거
+ 	* 추상메소드는 무조건 클래스에서 구현해야한다. (오버라이드)
+ 	
+ 인터페이스와 추상클래스의 명확한 용도
+ 		*공장을 지으면 공장을 짓는 틀이 있다.    => 추상 클래스
+ 		*삼성공장을 지을때 공장에 들어가는 필수 요소를 가지고 짓고 + 삼성만 필요한 기능들
+ 		*엘지공장을 지을때 또 필수 요소 + 엘지만 필요한 기능들
+ 		*이게              추상 클래스  +  인터페이스
+ 	
+
+20220728 
+인터페이스 > <HDMI>,<Computer>,<Monitor>
+	인터페이스 특징: (상속 x 구현이라고 한다)
+		*모든메소드는 기본적으로 추상 메소드로 정의한다. 
+		*생성을 할 수 없다.
+		*일반 변수는 선언할 수 없다.
+		*무조건 스태틱 상수를 사용한다. 
+		*일반 메소드를 정의하기 위해서는 반환 자료형 앞에 default를 입력해야한다. 
+		*인터페이스는 다중구현이 가능하다.   ==> HDMI랑 VGA 다중구현
+		*      - 클래스는 다중상속 안됨
+		*인터페이스랑 인터페이스 끼리는 상속
+		*인터페이스랑 클래스는 implements 구현
+		
+	<HDMI>,<VGA>에서 동일한 메소드 명을 사용하면 동일한 동작만 하게되고
+	그리고<Computer>에 우선 HDMI 자료형의 변수만 선언되어있다. 
+	그래서 인터페이스 하나를 더 만들어서 HDMI와 VGA를 묶어주겠다 >>> <ConnectionTerminal>
+	<VGA>, <HDMI>를 extends <ConnectionTerminal>해주고 connect 메소드를 지워준다. 
+	
+	Computer(ConnectionTerminal)
 	
 	
+	인터페이스와 클래스의 차이점
+	https://myjamong.tistory.com/150
 
 	
 	
+
+
+
 		
 
-
-	
-  	
-  	
- 
-	
+		
+							

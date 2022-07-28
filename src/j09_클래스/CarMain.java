@@ -18,6 +18,7 @@ public class CarMain {
 	 * 	현대자동차 아반떼 그레이
 	 */
 	public static void main(String[] args) {
+		System.out.println((new Car()).toString());
 		Car car1 = new Car();
 		Car car2 = new Car();
 		Car car3 = new Car();
