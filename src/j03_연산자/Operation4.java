@@ -4,7 +4,7 @@ public class Operation4 {
 
 	public static void main(String[] args) {
 		
-		int year = 2001;
+		int year = 990;
 		String result = year % 4 == 0 
 				&& (year % 100 != 0 || year % 400 == 0) ? "윤년" 
 						: "윤년아님";

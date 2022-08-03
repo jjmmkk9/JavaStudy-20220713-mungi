@@ -41,11 +41,11 @@
 			(int) 9.0 / 2 = 4 둘다 정수여서 내가 원하는 4로 값 받을 수 있다.
 	증감연산자: ++, --    <Operation1>
 	관계연산자: >, <, >=, <=, ==, !=
-	논리연산자:
-	 		AND 연산 (&&) - 곱
+	논리연산자:  
+	  		AND 연산 (&&) - 곱
 	 			true && true => true  (1*1=1)
 	 			true && false => false (1*0=0)
-  			OR 연산 (||) - 합
+  			OR 연산 (||) - 합  
   				true || true => true (1+1=2)
   				true || false => true(1+0=1)
   				false || false => false(0+0=0)
@@ -53,6 +53,7 @@
   			!true => false
   			!false => true
   			!(true && false) => true
+  			
   	조건연산자:
   			? :    <Operation4>
   	
@@ -294,6 +295,8 @@ j12_다형성 - 인터페이스, 추상
  		*삼성공장을 지을때 공장에 들어가는 필수 요소를 가지고 짓고 + 삼성만 필요한 기능들
  		*엘지공장을 지을때 또 필수 요소 + 엘지만 필요한 기능들
  		*이게              추상 클래스  +  인터페이스
+ 		* 잘 모르겠다..............................................
+ 		* 이걸 내가 만들어 보라고 하면 어떻게 해야될지 모르겠는;;
  	
 
 20220728 
@@ -316,9 +319,41 @@ j12_다형성 - 인터페이스, 추상
 	
 	Computer(ConnectionTerminal)
 	
+20220729
+j09_클래스3 
+	자 다시한번 잊지말자 클래스는 틀! 그룹화!다.
+	<Animal> -> <Human>, <Tiger>처럼
+	<Person> -> <student>, <Teacher> 관계성
+		학교에 관한 프로그램일때  만들고 싶은 객체 ==> 학생, 선생님
+		학생과 선생님을 같이 찍어내기 위해 만드는 부모 클래스 ==> Person
+		그래서 Student와 Teacher클래스는 extends Person으로 각자 상속이다. 
+		
+		Person에는 변수 두가지가 존재(인간에게 적용)
+			private String name;
+			private int age;     
+		Student에는 변수 세가지가 존재(학생에게만 적용)
+			private String schoolName;  
+			private int studentCode;
+			private int studentYear;
+		Teacher에는 변수 두가지가 존재(선생님에게만 적용)
+			private String subject;
+			private int teacherCode;
+			
+j11_상속2
 	
-	인터페이스와 클래스의 차이점
-	https://myjamong.tistory.com/150
+j12_다형성2 > <Messenger>
+
+j13_최상위_클래스 > <ObjectMain> <Test>
+	우리는 Object라는 클래스를 만든 적 없는데 Object object = new Object();했더니 object. 에 참조 메소드들이 있다.
+	그래서 <Test>에서 ctrl + space해서 equals, toString, hashCode 들을 오버라이드 해준다. 
+	
+	그러니까 모든 객체는 equals, toString, hashCode 메소드를 사용할 수 있다. 
+	
+<HashCodeMain> hashCode랑 equals가 어떻게 다른지 모르겠음.
+	hash는 값으로만 코드를 생성한다. 
+<ClassMain> Class Class도 뭔지 잘 모르겠음 어떻게 쓰는지 잘 모르겠음
+
+
 
 	
 	

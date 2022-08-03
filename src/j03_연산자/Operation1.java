@@ -7,8 +7,8 @@ public class Operation1 {
 		int num = 50;			  /* 기대 */ /* 실제 */
 		System.out.println(++num); /* 51 */  /* 51  */
 		System.out.println(num);   /* 51 */  /* 51 */
-		System.out.println(num++); /* 52 */  /* 51 */
-		System.out.println(num);   /* 52 */  /* 52 */
+		System.out.println(num++); /* 52 */  /* 51 */ 
+		System.out.println(num);   /* 52 */  /* 52 */ 
 		
 		
 		System.out.println(--num); /* 51 */

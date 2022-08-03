@@ -11,9 +11,14 @@ public class Constant {
 		 * 초기화가 될 수 없는 값이 상수*/
 		
 		int number = 10;
-		System.out.println("최소값: " + MIN_NUMBER);
-		System.out.println("최대값: " + MAX_NUMBER);
+		System.out.println(number);
+		number = 20; 
+		System.out.println(number);
+		number = 30;
+//		System.out.println("최소값: " + MIN_NUMBER);
+//		System.out.println("최대값: " + MAX_NUMBER);
 		System.out.println("현재값: " + number );
+		System.out.println();
 
 	}
 
