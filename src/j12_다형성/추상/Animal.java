@@ -14,4 +14,5 @@ public abstract class Animal {
 	//move라는 공통 특성을 모아서 작성해두겠다
 	public abstract void move();
 	
+	
 }

@@ -9,6 +9,9 @@ public class PersonMain {
 			System.out.println(i + 1 + "번 사람(이름): " + names[i]);
 			System.out.println(i + 1 + "번 사람(나이): " + ages[i]);
 		}
-		Person person1 = new Person();//클래스 생성자 호출하면 사람이 한명 만들어진다. 
-	}
+		//Person person1 = new Person();//클래스 생성자 호출하면 사람이 한명 만들어진다.
+		//Person 은 추상클래스라서 생성 할 수 없다.
+		
+	}		
+	
 }

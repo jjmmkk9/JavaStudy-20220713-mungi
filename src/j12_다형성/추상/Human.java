@@ -4,6 +4,9 @@ public class Human extends Animal{
 	/*
 	 * 이 메소드는 무조건 오버라이드해야한다.  
 	 *  => 추상메소드는 무적건 구현해주어야 한다. */
+	public Human() {
+		System.out.println("사람 한명 생성");
+	}
 	@Override
 	public void move() {
 		System.out.println("사람이 두발로 걷습니다.");
