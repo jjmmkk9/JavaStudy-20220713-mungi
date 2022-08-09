@@ -27,6 +27,7 @@ public class StrTestMain {
 		Consumer<String> consumer = data -> {
 			System.out.println("data: " + data);
 		};
+		
 		///절대 이해안됨
 		consumer.accept("김준일");
 		consumer.andThen(consumer).andThen(consumer).accept("김준이");
@@ -34,6 +35,11 @@ public class StrTestMain {
 		
 		Function<Integer, String> f = (num) -> Integer.toString(num);
 		System.out.println(f.apply(100));
+		
+	
+		
 	}
 
+	
+	
 }

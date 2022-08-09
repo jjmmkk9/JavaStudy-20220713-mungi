@@ -21,6 +21,8 @@ public class Main {
 			
 			@Override
 			public double calc(Double value1, Double value2) {
+				System.out.println("value1: " + value1);
+				System.out.println("value2: " + value2);
 				return value1 + value2;
 			}
 			
@@ -39,7 +41,7 @@ public class Main {
 			System.out.println("v2: " + v2);
 			return v1 + v2;
 		};
-		
+		System.out.println(plusMathLamda2.calc(50.5, 10.5));
 	}
 
 }
