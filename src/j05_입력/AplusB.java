@@ -6,7 +6,7 @@ public class AplusB {
 		int result = 0;
 		for (int i = 0; i < 10; i++) {
 			
-			result = result + (i + 1);
+			result += (i + 1);  //result = result + (i + 1);
 		}
 		System.out.println(result);
 

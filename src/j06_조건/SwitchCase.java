@@ -4,10 +4,9 @@ public class SwitchCase {
 
 	public static void main(String[] args) {
 		
-		String select = "10";
+		String select = "20";
 		switch(select) {
 		case "10":
-			System.out.println("10입니다.");
 			System.out.println("10입니다.");
 			break;
 		case "20":
