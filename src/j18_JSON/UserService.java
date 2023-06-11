@@ -8,7 +8,8 @@ public class UserService {
 		//"생성하기도 귀찮다! 스태틱 줄게요"
 	public static User createUser() {  //반환 자료형이 User 클래스
 		List<String> hobby = new ArrayList<String>();
-		hobby.addAll(Arrays.asList(new String[] {"수영", "넷플릭스", "야구보기", "강아지만지기"}));
+	//	hobby.addAll(Arrays.asList(new String[] {"수영", "넷플릭스", "야구보기", "강아지만지기"}));
+		hobby.addAll(Arrays.asList(new String[] {"수영", "넷플릭스", "야구보기", "강아지 만지기"}));
 		
 		User user = User.builder()
 				.userCode(1)

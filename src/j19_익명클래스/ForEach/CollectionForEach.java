@@ -18,9 +18,12 @@ public class CollectionForEach {
 		int studentCode = 20220001;
 		
 		List<String> studentList = new ArrayList<String>();
+		
+		//String으로 저장된 이름 ", "로 구분해 잘라서 배열에 넣기
 		String[] students = name.split(", ");
 		studentList = Arrays.asList(students);
 				
+		
 		List<Integer> codeList = new ArrayList<Integer>();
 		for(int i  = 0; i < students.length; i++) {
 			codeList.add(studentCode++);
@@ -38,7 +41,7 @@ public class CollectionForEach {
 		
 
 //정렬한거  -> 이렇게 하거나 아니면 hashMap 말고 TreeMap 쓰면 정렬됨 (k가 integer인경우)
-		List<Integer> keySet = new ArrayList<Integer>(studentMap.keySet());
+		List<Integer> keySet = new ArrayList<Integer>(studentMap.keySet()); 	//.keySet은 모든 키값을 나열 반환
         // 키 값으로 오름차순 정렬
         Collections.sort(keySet);
 

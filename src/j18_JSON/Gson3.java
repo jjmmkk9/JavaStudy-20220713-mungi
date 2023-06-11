@@ -11,6 +11,7 @@ import com.google.gson.GsonBuilder;
 public class Gson3 {
 
 	public static void main(String[] args) {
+										//return : user 객체
 		User user = new UserService().createUser();
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		Map<String, Object> map = new HashMap<String, Object>();

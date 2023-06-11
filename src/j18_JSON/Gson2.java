@@ -9,8 +9,8 @@ import com.google.gson.GsonBuilder;
 public class Gson2 {
 
 	public static void main(String[] args) {
-							//스태틱 메소드 createUser
-		User user= UserService.createUser();
+								//스태틱 메소드 createUser   return : user 객체 
+		User user = UserService.createUser();
 		
 		//객체를 JSON으로 변환 -> toJson(객체)
 		//"사용하려면 GSON있어야 겟죠??"
@@ -23,8 +23,9 @@ public class Gson2 {
 		String userJson = gson.toJson(user);
 		System.out.println(userJson);
 		
+		//Object -> Json 변환 toJson(변환할 객체)
 		//Json -> Object 변환 fromJson(json문자열, 변환할 객체 클래스);
-		//"해당 userJson을 User 클래스  userObj로 변환하겠다."
+		//"userJson 텍스트를 User 클래스 객체로 변환한다."
 		User userObj = gson.fromJson(userJson, User.class);
 		
 		//"객체로 변환했으니까 게터 세터 다 쓸 수 있겠됴"

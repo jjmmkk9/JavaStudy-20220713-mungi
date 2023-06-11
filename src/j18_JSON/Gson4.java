@@ -24,9 +24,9 @@ public class Gson4 {
 		System.out.println();
 		System.out.println(jsonObject);
 		
-		//반대로
+		//반대로 json -> jsonObject
 		JsonObject jsonObj = gson.fromJson(json, JsonObject.class);
-		System.out.println(jsonObj);
+		System.out.println(jsonObj); //setPrettyPrinting안됨 왜냐 객체임
 	}
 
 }
